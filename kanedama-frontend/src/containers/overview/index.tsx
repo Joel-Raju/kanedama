@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import CompanyInfo from './CompanyInfo';
 import NumericInfoCard from './NumericInfoCard';
+import AccountDetails from './AccountDetails';
 
 const Overview: React.FC = () => {
   return (
@@ -12,8 +13,11 @@ const Overview: React.FC = () => {
       </StatsWrapper>
       <CompanyInfoWrapper>
         <CompanyInfo />
+        <ChartWrapper>chart</ChartWrapper>
       </CompanyInfoWrapper>
-      <AccountsWrapper>account info</AccountsWrapper>
+      <AccountsWrapper>
+        <AccountDetails />
+      </AccountsWrapper>
     </StyledWrapper>
   );
 };
@@ -43,7 +47,14 @@ const AccountsWrapper = styled.div`
   display: flex;
   flex: 1;
   flex-flow: row wrap;
-  padding: 16px;
+  margin: 16px;
+`;
+
+const ChartWrapper = styled.div`
+  display: flex;
+  flex: 1;
+  background: rgb(250, 248, 243);
+  margin: 8px;
 `;
 
 export default Overview;
