@@ -9,7 +9,7 @@ const Wrapper = styled.div`
 `;
 
 const SidebarWrapper = styled.aside`
-  flex: 0 1 300px;
+  flex: 0 0 300px;
   order: 0;
   background-color: rgb(250, 250, 250);
 `;

@@ -41,5 +41,10 @@ const AccountDetailsWrapper = styled.div`
     display: flex;
     flex-direction: row;
     overflow-x: auto;
+    padding-bottom: 16px;
+
+    &::-webkit-scrollbar-track {
+      width: 2px;
+    }
   }
 `;

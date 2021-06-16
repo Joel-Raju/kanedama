@@ -52,7 +52,7 @@ const AccountsWrapper = styled.div`
 
 const ChartWrapper = styled.div`
   display: flex;
-  flex: 1;
+  flex: 2;
   background: rgb(250, 248, 243);
   margin: 8px;
 `;

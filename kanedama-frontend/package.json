@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "currency-symbol-map": "^5.0.1",
     "next": "10.2.3",
     "react": "17.0.2",
     "react-countup": "^4.3.3",
