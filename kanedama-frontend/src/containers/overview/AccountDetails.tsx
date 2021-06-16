@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Col, FlexGrid, Row } from '../../components';
 import { Account } from '../../types/Account';
 import AccountCard from './AccountCard';
 
@@ -11,20 +12,25 @@ const AccountDetails: React.FC<Props> = ({ accountList }) => {
   return (
     <AccountDetailsWrapper>
       <h3>Account details</h3>
-      <div>
-        <AccountCard />
-        <AccountCard />
-        <AccountCard />
-        <AccountCard />
-        <AccountCard />
-        <AccountCard />
-        <AccountCard />
-        <AccountCard />
-        <AccountCard />
-        <AccountCard />
-        <AccountCard />
-        <AccountCard />
-      </div>
+      <FlexGrid>
+        <Row>
+          <Col>
+            <AccountCard />
+          </Col>
+          <Col>
+            <AccountCard />
+          </Col>
+          <Col>
+            <AccountCard />
+          </Col>
+          <Col>
+            <AccountCard />
+          </Col>
+          <Col>
+            <AccountCard />
+          </Col>
+        </Row>
+      </FlexGrid>
     </AccountDetailsWrapper>
   );
 };

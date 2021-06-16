@@ -15,3 +15,22 @@ export interface Account {
   current: number;
   update_timestamp: string;
 }
+
+export type TRANSACTION_STATUS = 'SUCCEEDED' | 'FAILED';
+
+export type TRANSACTION_TYPE = 'CREDIT' | 'DEBIT';
+
+export type TRANSACTION_CATEGORY =
+  | 'CREDIT'
+  | 'ATM'
+  | 'BILL_PAYMENT'
+  | 'PURCHASE';
+
+export interface Transaction {
+  timestamp: string;
+  transaction_type: TRANSACTION_TYPE;
+  transaction_category: TRANSACTION_CATEGORY;
+  amount: number;
+  currency: string;
+  status: TRANSACTION_STATUS;
+}

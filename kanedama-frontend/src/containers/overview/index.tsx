@@ -2,23 +2,48 @@ import styled from 'styled-components';
 import CompanyInfo from './CompanyInfo';
 import NumericInfoCard from './NumericInfoCard';
 import AccountDetails from './AccountDetails';
+import { Col, FlexGrid, Row } from '../../components';
 
 const Overview: React.FC = () => {
   return (
-    <StyledWrapper>
-      <StatsWrapper>
-        <NumericInfoCard value={1000000} title='Balance' />
-        <NumericInfoCard value={1000000} title='Balance' />
-        <NumericInfoCard value={1000000} title='Balance' />
-      </StatsWrapper>
-      <CompanyInfoWrapper>
-        <CompanyInfo />
-        <ChartWrapper>chart</ChartWrapper>
-      </CompanyInfoWrapper>
-      <AccountsWrapper>
+    <FlexGrid>
+      <Row>
+        <Col>
+          <NumericInfoCard value={1000000} title='Balance' />
+        </Col>
+        <Col>
+          <NumericInfoCard value={1000000} title='Balance' />
+        </Col>
+        <Col>
+          <NumericInfoCard value={1000000} title='Balance' />
+        </Col>
+      </Row>
+
+      <Row>
+        <Col>
+          <CompanyInfo />
+        </Col>
+        <Col>
+          <ChartWrapper>chart</ChartWrapper>
+        </Col>
+      </Row>
+      <Row>
         <AccountDetails />
-      </AccountsWrapper>
-    </StyledWrapper>
+      </Row>
+    </FlexGrid>
+
+    // <StyledWrapper>
+    //   <StatsWrapper>
+    //     <NumericInfoCard value={1000000} title='Balance' />
+    //     <NumericInfoCard value={1000000} title='Balance' />
+    //     <NumericInfoCard value={1000000} title='Balance' />
+    //   </StatsWrapper>
+    //   <CompanyInfoWrapper>
+    //     <CompanyInfo />
+    //     <ChartWrapper>chart</ChartWrapper>
+    //   </CompanyInfoWrapper>
+    //   <AccountsWrapper><AccountDetails /></AccountsWrapper>
+    // </StyledWrapper>
   );
 };
 
@@ -32,20 +57,18 @@ const StatsWrapper = styled.div`
   flex: 1;
   flex-flow: row wrap;
   justify-content: space-between;
-  flex-wrap: wrap;
   padding: 16px;
 `;
 
 const CompanyInfoWrapper = styled.div`
   display: flex;
-  flex: 1;
+  flex-grow: 1;
   flex-flow: row wrap;
   padding: 16px;
 `;
 
 const AccountsWrapper = styled.div`
   display: flex;
-  flex: 1;
   flex-flow: row wrap;
   margin: 16px;
 `;
